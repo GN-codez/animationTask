@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Animation Task
+        </title>
+        <style>
+
+            /*Here are our @keyframe animations*/
+
+                @keyframes slideInLeft{
+                    /* We have one here called 'slideInLeft' and it will
+                    move the heart on the X axis from 400px to 0 */
+                    from { 
+                        transform: translateX(400px);
+                    }
+                    to {
+                        transform: translateX(0);
+                    }
+                }
+
+                @keyframes slideDownUp{
+                    /* We have one here called 'slideUpDown' and it will
+                    move the heart on the Y axis this time from -80px to 80px */
+                    from { 
+                        transform: translateY(-80px);
+                    }
+
+                    to {
+                        transform: translateY(80px);
+                    }
+                }
+
+                @keyframes rotate{
+                    /* We have one here called 'rotate' and it will
+                     move the heart around 360% */
+                    from {
+                        transform: rotate(0);
+                    }
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                #heart1 {
+
+                    height: 150px;
+                    width: 250px;
+
+                    /* So, in the CSS of heart 1 we use the 
+                    'slideInLeft' animation */
+
+                    /* The 'animation-name' property takes the 
+                    value of the name of the @keyframe */
+                    animation-name: slideInLeft;
+
+                     /* The 'animation-duration' property takes the 
+                    value of the amount of time you want the 
+                    animation to stretch out for */
+                    animation-duration: 1s;
+
+                     /* The 'animation-timing-function' property takes the 
+                    value of what you want the animated object 
+                    to do after the time is up*/
+                    animation-timing-function: reverse;
+
+                     /* The 'animation-delay' property takes the 
+                    value of how long you want it 
+                    to wait until the next iteration */
+                    animation-delay: 0s;
+
+                     /* The 'animation-iteration-count' property takes the 
+                    value of the amount of times you 
+                    want it to repeat the animation */
+                    animation-iteration-count: infinite;
+
+                     /* The 'animation-direction' property takes the
+                     value of whether the animation should be played
+                     forwards, backwards or alternating between the two */
+                    animation-direction: normal;
+
+                     /* The 'animation-fill-mode' property takes the value
+                     of any specified styling for the animated object at 
+                     the start or end of the animation. */
+                    animation-fill-mode: none;
+                    
+                }
+
+                #heart2 {
+                    height: 150px;
+                    width: 250px;
+
+
+                    /* And, in the CSS of heart 2 we use the 
+                    'slideUpDown' animation. The styles here 
+                    work in the same way as the styles for #heart1 */
+
+                    animation-name: slideDownUp;
+                    animation-duration: 1s;
+                    animation-timing-function: reverse;
+                    animation-delay: 0s;
+                    animation-iteration-count: infinite;
+                    animation-direction: normal;
+                    animation-fill-mode: none;
+                }
+
+
+                #heart3 {
+                    height: 150px;
+                    width: 250px;
+
+
+                    /* So, in the CSS of heart 3 we use the 
+                    'rotate' animation. The styles here 
+                    work in the same way as the styles for #heart1 */
+                    
+                    animation-name: rotate;
+                    animation-duration: 1.3s;
+                    animation-timing-function: reverse;
+                    animation-delay: 0s;
+                    animation-iteration-count: infinite;
+                    animation-direction: normal;
+                    animation-fill-mode: none;
+                }
+        </style>
+    </head>
+
+    <body>
+
+        <!--ELEMENTS TO BE ANIMATED-->
+        <img src="loveHeart2.png" id="heart1"/>
+        <img src="loveHeart2.png" id="heart2"/>
+        <img src="loveHeart2.png" id="heart3"/>
+
+        <script type="text/javascript">
+        </script>
+    </body>
+</html>
